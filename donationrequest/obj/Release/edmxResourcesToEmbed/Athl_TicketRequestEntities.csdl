@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Athl_TicketRequestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Athl_TicketRequestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="files" EntityType="Athl_TicketRequestModel.file" />
+    <EntitySet Name="comments" EntityType="Athl_TicketRequestModel.comment" />
+    <EntitySet Name="individualticketrequests" EntityType="Athl_TicketRequestModel.individualticketrequest" />
+    <EntitySet Name="servicesforms" EntityType="Athl_TicketRequestModel.servicesform" />
+    <EntitySet Name="receiveds" EntityType="Athl_TicketRequestModel.received" />
+    <EntitySet Name="tickets" EntityType="Athl_TicketRequestModel.ticket" />
+    <EntitySet Name="dependents" EntityType="Athl_TicketRequestModel.dependent" />
+    <EntitySet Name="users" EntityType="Athl_TicketRequestModel.user" />
+    <EntitySet Name="requests" EntityType="Athl_TicketRequestModel.request" />
+    <EntitySet Name="compticketrequests" EntityType="Athl_TicketRequestModel.compticketrequest" />
+    <EntitySet Name="ticketrequests" EntityType="Athl_TicketRequestModel.ticketrequest" />
+    <EntitySet Name="sports" EntityType="Athl_TicketRequestModel.sport" />
+  </EntityContainer>
+  <EntityType Name="file">
+    <Key>
+      <PropertyRef Name="requestid" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="comment1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="individualticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="employeename" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="employeetitle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="numberoftickets" Type="Int16" />
+    <Property Name="seatlocation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="eventname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="eventdate" Type="DateTime" Precision="0" />
+    <Property Name="parking" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="additionaltickets" Type="Boolean" />
+    <Property Name="additionallocation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="notickets" Type="Int16" />
+    <Property Name="sport" Type="Int16" />
+  </EntityType>
+  <EntityType Name="servicesform">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="eventdateseason" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="contactname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="contactphone" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="citystatezip" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="totalvalue" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="additionalnotes" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="goodsandservices" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="deliverymethod" Type="Boolean" Nullable="false" />
+    <Property Name="deliveryto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="deliveryaddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="supervisorid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="received">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="item" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="term" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="count" Type="Int16" />
+    <Property Name="receivingname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="eventgamedate" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dependent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="firstname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="overview" Type="Boolean" Nullable="false" />
+    <Property Name="supervisor" Type="Boolean" Nullable="false" />
+    <Property Name="senior" Type="Boolean" Nullable="false" />
+    <Property Name="parking" Type="Boolean" Nullable="false" />
+    <Property Name="ticket" Type="Boolean" Nullable="false" />
+    <Property Name="admin" Type="Boolean" Nullable="false" />
+    <Property Name="spgroup" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="request">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="requestedby" Type="Int32" Nullable="false" />
+    <Property Name="form" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="pendingsupervisor" Type="Int16" />
+    <Property Name="pendingsenior" Type="Int16" />
+    <Property Name="pendingparking" Type="Int16" />
+    <Property Name="pendingticket" Type="Int16" />
+    <Property Name="supervisornote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="seniornote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="parkingnote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ticketnote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="approved" Type="Boolean" />
+    <Property Name="supervisorid" Type="Int32" />
+    <Property Name="seniorid" Type="Int32" />
+    <Property Name="parkingid" Type="Int32" />
+    <Property Name="ticketid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="compticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="employeename" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="employeetitle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="numberoftickets" Type="Int32" />
+    <Property Name="seatlocation" Type="Int32" />
+    <Property Name="additionaltickets" Type="Int32" />
+    <Property Name="eventname" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="additionallocation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="parking" Type="Boolean" />
+    <Property Name="notickets" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="Int32" Nullable="false" />
+    <Property Name="employeename" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="eventname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sport" Type="Int32" />
+    <Property Name="deliverymethod" Type="Int16" />
+    <Property Name="deliveryto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="deliveryaddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="supervisorid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sport1" Type="Int16" Nullable="false" />
+    <Property Name="game" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="loc" Type="Boolean" Nullable="false" />
+    <Property Name="soldout" Type="Boolean" Nullable="false" />
+    <Property Name="override_restriction" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

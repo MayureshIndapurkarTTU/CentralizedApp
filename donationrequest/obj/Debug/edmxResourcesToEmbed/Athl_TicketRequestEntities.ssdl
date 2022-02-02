@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Athl_TicketRequestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="comment" Type="text" />
+    <Property Name="date" Type="varchar" MaxLength="225" />
+    <Property Name="requestid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="compticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="employeename" Type="varchar" MaxLength="300" />
+    <Property Name="employeetitle" Type="varchar" MaxLength="300" />
+    <Property Name="numberoftickets" Type="int" />
+    <Property Name="seatlocation" Type="int" />
+    <Property Name="additionaltickets" Type="int" />
+    <Property Name="eventname" Type="varchar" MaxLength="300" />
+    <Property Name="location" Type="varchar" MaxLength="300" />
+    <Property Name="additionallocation" Type="varchar" MaxLength="300" />
+    <Property Name="parking" Type="bit" />
+    <Property Name="notickets" Type="int" />
+  </EntityType>
+  <EntityType Name="dependents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="300" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Athl_TicketRequestTest.dbo.files' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="files">
+    <Key>
+      <PropertyRef Name="requestid" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="requestid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="300" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="individualticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="employeename" Type="varchar" MaxLength="300" />
+    <Property Name="employeetitle" Type="varchar" MaxLength="300" />
+    <Property Name="numberoftickets" Type="smallint" />
+    <Property Name="seatlocation" Type="varchar" MaxLength="300" />
+    <Property Name="eventname" Type="varchar" MaxLength="300" />
+    <Property Name="eventdate" Type="date" />
+    <Property Name="parking" Type="varchar" MaxLength="300" />
+    <Property Name="additionaltickets" Type="bit" />
+    <Property Name="additionallocation" Type="varchar" MaxLength="300" />
+    <Property Name="location" Type="varchar" MaxLength="300" />
+    <Property Name="notickets" Type="smallint" />
+    <Property Name="sport" Type="smallint" />
+  </EntityType>
+  <EntityType Name="received">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="item" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="300" />
+    <Property Name="term" Type="varchar" MaxLength="300" />
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="requests">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="timestamp" Type="datetime" Nullable="false" />
+    <Property Name="requestedby" Type="int" Nullable="false" />
+    <Property Name="form" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="500" />
+    <Property Name="pendingsupervisor" Type="smallint" />
+    <Property Name="pendingsenior" Type="smallint" />
+    <Property Name="pendingparking" Type="smallint" />
+    <Property Name="pendingticket" Type="smallint" />
+    <Property Name="supervisornote" Type="text" />
+    <Property Name="seniornote" Type="text" />
+    <Property Name="parkingnote" Type="text" />
+    <Property Name="ticketnote" Type="text" />
+    <Property Name="approved" Type="bit" />
+    <Property Name="supervisorid" Type="int" />
+    <Property Name="seniorid" Type="int" />
+    <Property Name="parkingid" Type="int" />
+    <Property Name="ticketid" Type="int" />
+  </EntityType>
+  <EntityType Name="servicesform">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="eventdateseason" Type="varchar" MaxLength="300" />
+    <Property Name="company" Type="varchar" MaxLength="300" />
+    <Property Name="contactname" Type="varchar" MaxLength="300" />
+    <Property Name="contactphone" Type="varchar" MaxLength="300" />
+    <Property Name="address" Type="varchar" MaxLength="300" />
+    <Property Name="citystatezip" Type="varchar" MaxLength="300" />
+    <Property Name="email" Type="varchar" MaxLength="300" />
+    <Property Name="totalvalue" Type="varchar" MaxLength="300" />
+    <Property Name="additionalnotes" Type="varchar" MaxLength="300" />
+    <Property Name="goodsandservices" Type="text" />
+    <Property Name="deliverymethod" Type="bit" Nullable="false" />
+    <Property Name="deliveryto" Type="varchar" MaxLength="300" />
+    <Property Name="deliveryaddress" Type="varchar" MaxLength="300" />
+    <Property Name="supervisorid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sport" Type="smallint" Nullable="false" />
+    <Property Name="game" Type="varchar" MaxLength="100" />
+    <Property Name="date" Type="date" />
+    <Property Name="loc" Type="bit" Nullable="false" />
+    <Property Name="soldout" Type="bit" Nullable="false" />
+    <Property Name="override_restriction" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ticketrequest">
+    <Key>
+      <PropertyRef Name="requestid" />
+    </Key>
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="employeename" Type="varchar" MaxLength="300" />
+    <Property Name="eventname" Type="text" />
+    <Property Name="sport" Type="int" />
+    <Property Name="deliverymethod" Type="smallint" />
+    <Property Name="deliveryto" Type="varchar" MaxLength="300" />
+    <Property Name="deliveryaddress" Type="varchar" MaxLength="300" />
+    <Property Name="supervisorid" Type="int" />
+  </EntityType>
+  <EntityType Name="tickets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="requestid" Type="int" Nullable="false" />
+    <Property Name="count" Type="smallint" />
+    <Property Name="receivingname" Type="varchar" MaxLength="300" />
+    <Property Name="purpose" Type="text" />
+    <Property Name="eventgamedate" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="300" />
+    <Property Name="password" Type="varchar" MaxLength="300" />
+    <Property Name="firstname" Type="varchar" MaxLength="300" />
+    <Property Name="lastname" Type="varchar" MaxLength="300" />
+    <Property Name="level" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="300" />
+    <Property Name="overview" Type="bit" Nullable="false" />
+    <Property Name="supervisor" Type="bit" Nullable="false" />
+    <Property Name="senior" Type="bit" Nullable="false" />
+    <Property Name="parking" Type="bit" Nullable="false" />
+    <Property Name="ticket" Type="bit" Nullable="false" />
+    <Property Name="admin" Type="bit" Nullable="false" />
+    <Property Name="spgroup" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="Athl_TicketRequestModelStoreContainer">
+    <EntitySet Name="comments" EntityType="Self.comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="compticketrequest" EntityType="Self.compticketrequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dependents" EntityType="Self.dependents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="individualticketrequest" EntityType="Self.individualticketrequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="received" EntityType="Self.received" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="requests" EntityType="Self.requests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicesform" EntityType="Self.servicesform" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sports" EntityType="Self.sports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ticketrequest" EntityType="Self.ticketrequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tickets" EntityType="Self.tickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="files" EntityType="Self.files" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [files].[requestid] AS [requestid], 
+    [files].[name] AS [name], 
+    [files].[id] AS [id]
+    FROM [dbo].[files] AS [files]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

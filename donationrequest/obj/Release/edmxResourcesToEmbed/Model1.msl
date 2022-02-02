@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADS_CentralizedDegreePlans_StagingModelStoreContainer" CdmEntityContainer="ADS_CentralizedDegreePlans_StagingEntities">
+    <FunctionImportMapping FunctionImportName="FetchAll" FunctionName="ADS_CentralizedDegreePlans_StagingModel.Store.FetchAll" />
+    <FunctionImportMapping FunctionImportName="FetchPlan" FunctionName="ADS_CentralizedDegreePlans_StagingModel.Store.FetchPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.FetchPlan_Result">
+          <ScalarProperty Name="Program" ColumnName="Program" />
+          <ScalarProperty Name="TTUCourse" ColumnName="TTUCourse" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Core" ColumnName="Core" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Core" ColumnName="Core" />
+          <ScalarProperty Name="Credits" ColumnName="Credits" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForeignCourses">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.ForeignCourse">
+        <MappingFragment StoreEntitySet="ForeignCourse">
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.Institution">
+        <MappingFragment StoreEntitySet="Institution">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JunctionEqs">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.JunctionEq">
+        <MappingFragment StoreEntitySet="JunctionEq">
+          <ScalarProperty Name="Static" ColumnName="Static" />
+          <ScalarProperty Name="TTUCourse" ColumnName="TTUCourse" />
+          <ScalarProperty Name="ForeignCourse" ColumnName="ForeignCourse" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JunctionPCs">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.JunctionPC">
+        <MappingFragment StoreEntitySet="JunctionPC">
+          <ScalarProperty Name="Static" ColumnName="Static" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="Program" ColumnName="Program" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programs">
+      <EntityTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.Program">
+        <MappingFragment StoreEntitySet="Program">
+          <ScalarProperty Name="Static" ColumnName="Static" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Countrywise" FunctionName="ADS_CentralizedDegreePlans_StagingModel.Store.Countrywise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADS_CentralizedDegreePlans_StagingModel.Countrywise_Result">
+          <ScalarProperty Name="TTUCourse" ColumnName="TTUCourse" />
+          <ScalarProperty Name="ForeignCourse" ColumnName="ForeignCourse" />
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

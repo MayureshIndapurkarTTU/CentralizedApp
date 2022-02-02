@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Athl_TicketRequestModelStoreContainer" CdmEntityContainer="Athl_TicketRequestEntities">
+    <EntitySetMapping Name="files">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.file">
+        <MappingFragment StoreEntitySet="files">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comments">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.comment">
+        <MappingFragment StoreEntitySet="comments">
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="comment1" ColumnName="comment" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="individualticketrequests">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.individualticketrequest">
+        <MappingFragment StoreEntitySet="individualticketrequest">
+          <ScalarProperty Name="sport" ColumnName="sport" />
+          <ScalarProperty Name="notickets" ColumnName="notickets" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="additionallocation" ColumnName="additionallocation" />
+          <ScalarProperty Name="additionaltickets" ColumnName="additionaltickets" />
+          <ScalarProperty Name="parking" ColumnName="parking" />
+          <ScalarProperty Name="eventdate" ColumnName="eventdate" />
+          <ScalarProperty Name="eventname" ColumnName="eventname" />
+          <ScalarProperty Name="seatlocation" ColumnName="seatlocation" />
+          <ScalarProperty Name="numberoftickets" ColumnName="numberoftickets" />
+          <ScalarProperty Name="employeetitle" ColumnName="employeetitle" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicesforms">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.servicesform">
+        <MappingFragment StoreEntitySet="servicesform">
+          <ScalarProperty Name="supervisorid" ColumnName="supervisorid" />
+          <ScalarProperty Name="deliveryaddress" ColumnName="deliveryaddress" />
+          <ScalarProperty Name="deliveryto" ColumnName="deliveryto" />
+          <ScalarProperty Name="deliverymethod" ColumnName="deliverymethod" />
+          <ScalarProperty Name="goodsandservices" ColumnName="goodsandservices" />
+          <ScalarProperty Name="additionalnotes" ColumnName="additionalnotes" />
+          <ScalarProperty Name="totalvalue" ColumnName="totalvalue" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="citystatezip" ColumnName="citystatezip" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactname" ColumnName="contactname" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="eventdateseason" ColumnName="eventdateseason" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="receiveds">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.received">
+        <MappingFragment StoreEntitySet="received">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+          <ScalarProperty Name="term" ColumnName="term" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="item" ColumnName="item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.ticket">
+        <MappingFragment StoreEntitySet="tickets">
+          <ScalarProperty Name="eventgamedate" ColumnName="eventgamedate" />
+          <ScalarProperty Name="purpose" ColumnName="purpose" />
+          <ScalarProperty Name="receivingname" ColumnName="receivingname" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dependents">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.dependent">
+        <MappingFragment StoreEntitySet="dependents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="spgroup" ColumnName="spgroup" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+          <ScalarProperty Name="ticket" ColumnName="ticket" />
+          <ScalarProperty Name="parking" ColumnName="parking" />
+          <ScalarProperty Name="senior" ColumnName="senior" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="overview" ColumnName="overview" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requests">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.request">
+        <MappingFragment StoreEntitySet="requests">
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="parkingid" ColumnName="parkingid" />
+          <ScalarProperty Name="seniorid" ColumnName="seniorid" />
+          <ScalarProperty Name="supervisorid" ColumnName="supervisorid" />
+          <ScalarProperty Name="approved" ColumnName="approved" />
+          <ScalarProperty Name="ticketnote" ColumnName="ticketnote" />
+          <ScalarProperty Name="parkingnote" ColumnName="parkingnote" />
+          <ScalarProperty Name="seniornote" ColumnName="seniornote" />
+          <ScalarProperty Name="supervisornote" ColumnName="supervisornote" />
+          <ScalarProperty Name="pendingticket" ColumnName="pendingticket" />
+          <ScalarProperty Name="pendingparking" ColumnName="pendingparking" />
+          <ScalarProperty Name="pendingsenior" ColumnName="pendingsenior" />
+          <ScalarProperty Name="pendingsupervisor" ColumnName="pendingsupervisor" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="form" ColumnName="form" />
+          <ScalarProperty Name="requestedby" ColumnName="requestedby" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compticketrequests">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.compticketrequest">
+        <MappingFragment StoreEntitySet="compticketrequest">
+          <ScalarProperty Name="notickets" ColumnName="notickets" />
+          <ScalarProperty Name="parking" ColumnName="parking" />
+          <ScalarProperty Name="additionallocation" ColumnName="additionallocation" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="eventname" ColumnName="eventname" />
+          <ScalarProperty Name="additionaltickets" ColumnName="additionaltickets" />
+          <ScalarProperty Name="seatlocation" ColumnName="seatlocation" />
+          <ScalarProperty Name="numberoftickets" ColumnName="numberoftickets" />
+          <ScalarProperty Name="employeetitle" ColumnName="employeetitle" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketrequests">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.ticketrequest">
+        <MappingFragment StoreEntitySet="ticketrequest">
+          <ScalarProperty Name="supervisorid" ColumnName="supervisorid" />
+          <ScalarProperty Name="deliveryaddress" ColumnName="deliveryaddress" />
+          <ScalarProperty Name="deliveryto" ColumnName="deliveryto" />
+          <ScalarProperty Name="deliverymethod" ColumnName="deliverymethod" />
+          <ScalarProperty Name="sport" ColumnName="sport" />
+          <ScalarProperty Name="eventname" ColumnName="eventname" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+          <ScalarProperty Name="requestid" ColumnName="requestid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sports">
+      <EntityTypeMapping TypeName="Athl_TicketRequestModel.sport">
+        <MappingFragment StoreEntitySet="sports">
+          <ScalarProperty Name="override_restriction" ColumnName="override_restriction" />
+          <ScalarProperty Name="soldout" ColumnName="soldout" />
+          <ScalarProperty Name="loc" ColumnName="loc" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="game" ColumnName="game" />
+          <ScalarProperty Name="sport1" ColumnName="sport" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

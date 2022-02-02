@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ATHL_DonationRequestTestModelStoreContainer" CdmEntityContainer="ATHL_DonationRequestTestEntities">
+    <EntitySetMapping Name="Supervisors">
+      <EntityTypeMapping TypeName="ATHL_DonationRequestTestModel.Supervisor">
+        <MappingFragment StoreEntitySet="Supervisors">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SupervisorId" ColumnName="SupervisorId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Eraider" ColumnName="Eraider" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="ATHL_DonationRequestTestModel.Ticket">
+        <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="NoOfTickets" ColumnName="NoOfTickets" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="ATHL_DonationRequestTestModel.Game">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="Opponent" ColumnName="Opponent" />
+          <ScalarProperty Name="GameDateTime" ColumnName="GameDateTime" />
+          <ScalarProperty Name="Sport" ColumnName="Sport" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DonationReqs">
+      <EntityTypeMapping TypeName="ATHL_DonationRequestTestModel.DonationReq">
+        <MappingFragment StoreEntitySet="DonationReq">
+          <ScalarProperty Name="EventFlyerPath" ColumnName="EventFlyerPath" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="FndRsrQ3" ColumnName="FndRsrQ3" />
+          <ScalarProperty Name="FndRsrQ2" ColumnName="FndRsrQ2" />
+          <ScalarProperty Name="FndRsrQ1" ColumnName="FndRsrQ1" />
+          <ScalarProperty Name="DateClosed" ColumnName="DateClosed" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="Approver2Comments" ColumnName="Approver2Comments" />
+          <ScalarProperty Name="Approver2TimeStamp" ColumnName="Approver2TimeStamp" />
+          <ScalarProperty Name="Approver2Status" ColumnName="Approver2Status" />
+          <ScalarProperty Name="Approver2Dept" ColumnName="Approver2Dept" />
+          <ScalarProperty Name="Approver2Id" ColumnName="Approver2Id" />
+          <ScalarProperty Name="Approver1Comments" ColumnName="Approver1Comments" />
+          <ScalarProperty Name="Approver1TimeStamp" ColumnName="Approver1TimeStamp" />
+          <ScalarProperty Name="Approver1Status" ColumnName="Approver1Status" />
+          <ScalarProperty Name="Approver1Dept" ColumnName="Approver1Dept" />
+          <ScalarProperty Name="Approver1Id" ColumnName="Approver1Id" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ItemDate" ColumnName="ItemDate" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="EventVenue" ColumnName="EventVenue" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="CharityName" ColumnName="CharityName" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaiverReqs">
+      <EntityTypeMapping TypeName="ATHL_DonationRequestTestModel.WaiverReq">
+        <MappingFragment StoreEntitySet="WaiverReq">
+          <ScalarProperty Name="ParticipantNames" ColumnName="ParticipantNames" />
+          <ScalarProperty Name="ParticipantSport" ColumnName="ParticipantSport" />
+          <ScalarProperty Name="DateClosed" ColumnName="DateClosed" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="Approver2Comments" ColumnName="Approver2Comments" />
+          <ScalarProperty Name="Approver2TimeStamp" ColumnName="Approver2TimeStamp" />
+          <ScalarProperty Name="Approver2Status" ColumnName="Approver2Status" />
+          <ScalarProperty Name="Approver2Dept" ColumnName="Approver2Dept" />
+          <ScalarProperty Name="Approver2Id" ColumnName="Approver2Id" />
+          <ScalarProperty Name="Approver1Comments" ColumnName="Approver1Comments" />
+          <ScalarProperty Name="Approver1TimeStamp" ColumnName="Approver1TimeStamp" />
+          <ScalarProperty Name="Approver1Status" ColumnName="Approver1Status" />
+          <ScalarProperty Name="Approver1Dept" ColumnName="Approver1Dept" />
+          <ScalarProperty Name="Approver1Id" ColumnName="Approver1Id" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="NoOfParticipants" ColumnName="NoOfParticipants" />
+          <ScalarProperty Name="IndividualRequested" ColumnName="IndividualRequested" />
+          <ScalarProperty Name="ActivityZipCode" ColumnName="ActivityZipCode" />
+          <ScalarProperty Name="ActivityCity" ColumnName="ActivityCity" />
+          <ScalarProperty Name="ActivityDateTime" ColumnName="ActivityDateTime" />
+          <ScalarProperty Name="ActivityFlyerPath" ColumnName="ActivityFlyerPath" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="ActivityDesc" ColumnName="ActivityDesc" />
+          <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+          <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

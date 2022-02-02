@@ -1,0 +1,95 @@
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\csc.exe
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\System.Collections.Immutable.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\System.Reflection.Metadata.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\vbc.exe
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\VBCSCompiler.exe
+C:\Dev Env\DonationRequest\donationrequest\bin\roslyn\VBCSCompiler.exe.config
+C:\Dev Env\DonationRequest\donationrequest\bin\donationrequest.dll.config
+C:\Dev Env\DonationRequest\donationrequest\bin\donationrequest.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\donationrequest.pdb
+C:\Dev Env\DonationRequest\donationrequest\bin\BotDetect.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\BotDetect.Web.Mvc.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\EntityFramework.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\EntityFramework.SqlServer.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\eRaiderSecurityHelper.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.DependencyCollector.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.Web.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.WindowsServer.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.ApplicationInsights.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\System.Data.SQLite.dll
+C:\Dev Env\DonationRequest\donationrequest\bin\EntityFramework.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\EntityFramework.SqlServer.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.DependencyCollector.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.Web.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.AI.WindowsServer.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.ApplicationInsights.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\System.Data.SQLite.xml
+C:\Dev Env\DonationRequest\donationrequest\bin\System.Data.SQLite.dll.config
+C:\Dev Env\DonationRequest\donationrequest\obj\Release\donationrequest.csprojAssemblyReference.cache
+C:\Dev Env\DonationRequest\donationrequest\obj\Release\donationrequest.csproj.CopyComplete
+C:\Dev Env\DonationRequest\donationrequest\obj\Release\donationrequest.dll
+C:\Dev Env\DonationRequest\donationrequest\obj\Release\donationrequest.pdb
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\csc.exe
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\vbc.exe
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\VBCSCompiler.exe
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\donationrequest.dll.config
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\donationrequest.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\donationrequest.pdb
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\BotDetect.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\BotDetect.Web.Mvc.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\EntityFramework.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\EntityFramework.SqlServer.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\eRaiderSecurityHelper.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.Web.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.ApplicationInsights.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Newtonsoft.Json.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Data.SQLite.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Net.Http.Formatting.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Web.Http.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Web.Http.WebHost.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\EntityFramework.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\EntityFramework.SqlServer.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.Web.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.ApplicationInsights.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\Newtonsoft.Json.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Data.SQLite.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Data.SQLite.dll.config
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Net.Http.Formatting.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Web.Http.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\bin\System.Web.Http.WebHost.xml
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\obj\Release\donationrequest.csproj.AssemblyReference.cache
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\obj\Release\donationrequest.csproj.CoreCompileInputs.cache
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\obj\Release\donationrequest.csproj.CopyComplete
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\obj\Release\donationrequest.dll
+C:\Users\mindapur\OneDrive - Texas Tech University\Desktop\DonationRequest #6\donationrequest\obj\Release\donationrequest.pdb

@@ -1,0 +1,100 @@
+﻿.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.subinstruction {
+    font-weight:bold;
+    padding-bottom:5px;
+}
+
+.small-column-header {
+    font-size:14px;
+    font-weight:bold;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.h3-smaller {
+    font-size: 19px;
+}
+
+.div-field-name {
+    /*width:170px;*/ 
+    /*width:100%;*/
+    font-weight:bold; 
+    line-height:2;
+    display:inline-flex;
+}
+
+.div-field-name span {
+    vertical-align:middle;
+}
+
+.div-field-name div {
+    padding-left:15px;
+}
+
+.mark-error {
+    background-color: pink !important;
+}
+
+.div-hidden {
+    visibility: hidden;
+}
+
+.error-msg {
+    font-size: x-large;
+    color: red;
+    line-height: initial;
+}
+
+.no-line-height {
+    line-height: initial;
+}
+
+div.center {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.no_tickets_msg {
+    padding-left: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+
+/* Form */
+.form-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form-title span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.form-description span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.form-note span {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+    font-size: 13px;
+}
+
+.form-hr hr {
+    border-style: inset;
+    margin-top: auto;
+}
+
+.form-guideline span {
+    font-weight: bold;
+    font-size: 11px;
+}

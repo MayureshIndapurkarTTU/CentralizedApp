@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Athl_TicketRequestTestModelStoreContainer" CdmEntityContainer="Athl_TicketRequestTestEntities">
+    <EntitySetMapping Name="sports">
+      <EntityTypeMapping TypeName="Athl_TicketRequestTestModel.sport">
+        <MappingFragment StoreEntitySet="sports">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sport1" ColumnName="sport" />
+          <ScalarProperty Name="game" ColumnName="game" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="loc" ColumnName="loc" />
+          <ScalarProperty Name="soldout" ColumnName="soldout" />
+          <ScalarProperty Name="override_restriction" ColumnName="override_restriction" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

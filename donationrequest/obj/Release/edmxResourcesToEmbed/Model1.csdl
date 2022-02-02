@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADS_CentralizedDegreePlans_StagingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ADS_CentralizedDegreePlans_StagingEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="FetchAll" ReturnType="Collection(String)">
+      <Parameter Name="programcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FetchPlan" ReturnType="Collection(ADS_CentralizedDegreePlans_StagingModel.FetchPlan_Result)">
+      <Parameter Name="programcode" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="semester" Mode="In" Type="String" />
+      <Parameter Name="country" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Courses" EntityType="ADS_CentralizedDegreePlans_StagingModel.Course" />
+    <EntitySet Name="ForeignCourses" EntityType="ADS_CentralizedDegreePlans_StagingModel.ForeignCourse" />
+    <EntitySet Name="Institutions" EntityType="ADS_CentralizedDegreePlans_StagingModel.Institution" />
+    <EntitySet Name="JunctionEqs" EntityType="ADS_CentralizedDegreePlans_StagingModel.JunctionEq" />
+    <EntitySet Name="JunctionPCs" EntityType="ADS_CentralizedDegreePlans_StagingModel.JunctionPC" />
+    <EntitySet Name="Programs" EntityType="ADS_CentralizedDegreePlans_StagingModel.Program" />
+    <AssociationSet Name="FK_ForeignCourse_Institution" Association="ADS_CentralizedDegreePlans_StagingModel.FK_ForeignCourse_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="ForeignCourse" EntitySet="ForeignCourses" />
+    </AssociationSet>
+    <FunctionImport Name="Countrywise" ReturnType="Collection(ADS_CentralizedDegreePlans_StagingModel.Countrywise_Result)">
+      <Parameter Name="country" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="FetchPlan_Result">
+    <Property Type="String" Name="Program" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="TTUCourse" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Institution" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Core" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Credits" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Core" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ForeignCourse">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Institution" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Institution1" Relationship="ADS_CentralizedDegreePlans_StagingModel.FK_ForeignCourse_Institution" FromRole="ForeignCourse" ToRole="Institution" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ForeignCourses" Relationship="ADS_CentralizedDegreePlans_StagingModel.FK_ForeignCourse_Institution" FromRole="Institution" ToRole="ForeignCourse" />
+  </EntityType>
+  <EntityType Name="JunctionEq">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ForeignCourse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TTUCourse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Static" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="JunctionPC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Semester" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Program" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Course" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Static" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Program">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Degree" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Static" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_ForeignCourse_Institution">
+    <End Type="ADS_CentralizedDegreePlans_StagingModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="ADS_CentralizedDegreePlans_StagingModel.ForeignCourse" Role="ForeignCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="ForeignCourse">
+        <PropertyRef Name="Institution" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Countrywise_Result">
+    <Property Type="String" Name="TTUCourse" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ForeignCourse" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Institution" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

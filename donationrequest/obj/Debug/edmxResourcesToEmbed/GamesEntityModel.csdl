@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Athl_TicketRequestTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sport1" Type="Int16" Nullable="false" />
+    <Property Name="game" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="loc" Type="Boolean" Nullable="false" />
+    <Property Name="soldout" Type="Boolean" Nullable="false" />
+    <Property Name="override_restriction" Type="Boolean" Nullable="false" />
+    <Property Name="hide" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="Athl_TicketRequestTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sports" EntityType="Self.sport" />
+  </EntityContainer>
+</Schema>

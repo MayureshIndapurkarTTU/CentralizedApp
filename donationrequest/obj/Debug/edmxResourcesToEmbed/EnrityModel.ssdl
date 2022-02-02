@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ATHL_DonationRequestTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DonationReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="char" MaxLength="5" />
+    <Property Name="CharityName" Type="varchar" MaxLength="50" />
+    <Property Name="EventName" Type="varchar" MaxLength="50" />
+    <Property Name="EventDateTime" Type="datetime" />
+    <Property Name="EventVenue" Type="varchar" MaxLength="50" />
+    <Property Name="ItemType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemDate" Type="datetime" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="Approver1Id" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1Status" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1TimeStamp" Type="datetime" />
+    <Property Name="Approver1Comments" Type="varchar(max)" />
+    <Property Name="Approver2Id" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2Status" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2TimeStamp" Type="datetime" />
+    <Property Name="Approver2Comments" Type="varchar(max)" />
+    <Property Name="DateSubmitted" Type="datetime" />
+    <Property Name="RequestStatus" Type="varchar" MaxLength="50" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="FndRsrQ1" Type="nchar" MaxLength="10" />
+    <Property Name="FndRsrQ2" Type="nchar" MaxLength="10" />
+    <Property Name="FndRsrQ3" Type="nchar" MaxLength="255" />
+    <Property Name="Website" Type="varchar" MaxLength="255" />
+    <Property Name="EventFlyerPath" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sport" Type="varchar" MaxLength="50" />
+    <Property Name="GameDateTime" Type="datetime" />
+    <Property Name="Opponent" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Supervisors">
+    <Key>
+      <PropertyRef Name="SupervisorId" />
+    </Key>
+    <Property Name="SupervisorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Eraider" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+    <Property Name="LastLogin" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ATHL_DonationRequestTest.dbo.Tickets' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="ReqId" />
+      <PropertyRef Name="GameId" />
+      <PropertyRef Name="NoOfTickets" />
+    </Key>
+    <Property Name="ReqId" Type="int" Nullable="false" />
+    <Property Name="GameId" Type="int" Nullable="false" />
+    <Property Name="NoOfTickets" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WaiverReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="char" MaxLength="5" />
+    <Property Name="OrgName" Type="varchar" MaxLength="50" />
+    <Property Name="OrgType" Type="varchar(max)" />
+    <Property Name="ActivityDesc" Type="varchar(max)" />
+    <Property Name="ActivityType" Type="varchar" MaxLength="50" />
+    <Property Name="ActivityFlyerPath" Type="varchar(max)" />
+    <Property Name="ActivityDateTime" Type="datetime" />
+    <Property Name="ActivityCity" Type="varchar" MaxLength="50" />
+    <Property Name="ActivityZipCode" Type="char" MaxLength="5" />
+    <Property Name="IndividualRequested" Type="varchar" MaxLength="255" />
+    <Property Name="NoOfParticipants" Type="int" />
+    <Property Name="ParticipantSport" Type="varchar" MaxLength="50" />
+    <Property Name="ParticipantNames" Type="varchar(max)" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="Approver1Id" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1Status" Type="varchar" MaxLength="50" />
+    <Property Name="Approver1TimeStamp" Type="datetime" />
+    <Property Name="Approver1Comments" Type="varchar(max)" />
+    <Property Name="Approver2Id" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2Status" Type="varchar" MaxLength="50" />
+    <Property Name="Approver2TimeStamp" Type="datetime" />
+    <Property Name="Approver2Comments" Type="varchar(max)" />
+    <Property Name="DateSubmitted" Type="datetime" />
+    <Property Name="RequestStatus" Type="varchar" MaxLength="50" />
+    <Property Name="DateClosed" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Tickets__GameId">
+    <End Role="Games" Type="Self.Games" Multiplicity="1" />
+    <End Role="Tickets" Type="Self.Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tickets__ReqId__15502E78">
+    <End Role="DonationReq" Type="Self.DonationReq" Multiplicity="1" />
+    <End Role="Tickets" Type="Self.Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonationReq">
+        <PropertyRef Name="ReqId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="ReqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ATHL_DonationRequestTestModelStoreContainer">
+    <EntitySet Name="DonationReq" EntityType="Self.DonationReq" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supervisors" EntityType="Self.Supervisors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WaiverReq" EntityType="Self.WaiverReq" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tickets" EntityType="Self.Tickets" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tickets].[ReqId] AS [ReqId], 
+    [Tickets].[GameId] AS [GameId], 
+    [Tickets].[NoOfTickets] AS [NoOfTickets]
+    FROM [dbo].[Tickets] AS [Tickets]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Tickets__GameId" Association="Self.FK__Tickets__GameId">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tickets__ReqId__15502E78" Association="Self.FK__Tickets__ReqId__15502E78">
+      <End Role="DonationReq" EntitySet="DonationReq" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

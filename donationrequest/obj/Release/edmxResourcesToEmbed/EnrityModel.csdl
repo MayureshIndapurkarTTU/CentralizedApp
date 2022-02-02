@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ATHL_DonationRequestTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Supervisor">
+    <Key>
+      <PropertyRef Name="SupervisorId" />
+    </Key>
+    <Property Name="SupervisorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Eraider" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="ReqId" />
+      <PropertyRef Name="GameId" />
+      <PropertyRef Name="NoOfTickets" />
+    </Key>
+    <Property Name="ReqId" Type="Int32" Nullable="false" />
+    <Property Name="GameId" Type="Int32" Nullable="false" />
+    <Property Name="NoOfTickets" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Game" Relationship="ATHL_DonationRequestTestModel.FK__Tickets__GameId" FromRole="Ticket" ToRole="Game" />
+    <NavigationProperty Name="DonationReq" Relationship="ATHL_DonationRequestTestModel.FK__Tickets__ReqId__15502E78" FromRole="Ticket" ToRole="DonationReq" />
+  </EntityType>
+  <EntityContainer Name="ATHL_DonationRequestTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Supervisors" EntityType="Self.Supervisor" />
+    <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+    <EntitySet Name="Games" EntityType="ATHL_DonationRequestTestModel.Game" />
+    <AssociationSet Name="FK__Tickets__GameId" Association="ATHL_DonationRequestTestModel.FK__Tickets__GameId">
+      <End Role="Game" EntitySet="Games" />
+      <End Role="Ticket" EntitySet="Tickets" />
+    </AssociationSet>
+    <EntitySet Name="DonationReqs" EntityType="ATHL_DonationRequestTestModel.DonationReq" />
+    <EntitySet Name="WaiverReqs" EntityType="ATHL_DonationRequestTestModel.WaiverReq" />
+    <AssociationSet Name="FK__Tickets__ReqId__15502E78" Association="ATHL_DonationRequestTestModel.FK__Tickets__ReqId__15502E78">
+      <End Role="DonationReq" EntitySet="DonationReqs" />
+      <End Role="Ticket" EntitySet="Tickets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GameDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Opponent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tickets" Relationship="ATHL_DonationRequestTestModel.FK__Tickets__GameId" FromRole="Game" ToRole="Ticket" />
+  </EntityType>
+  <Association Name="FK__Tickets__GameId">
+    <End Type="ATHL_DonationRequestTestModel.Game" Role="Game" Multiplicity="1" />
+    <End Type="ATHL_DonationRequestTestModel.Ticket" Role="Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DonationReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="CharityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EventName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EventDateTime" Type="DateTime" Precision="3" />
+    <Property Name="EventVenue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemDate" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Approver1Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Approver2Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <Property Name="RequestStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateClosed" Type="DateTime" Precision="3" />
+    <Property Name="FndRsrQ1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FndRsrQ2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FndRsrQ3" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventFlyerPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tickets" Relationship="ATHL_DonationRequestTestModel.FK__Tickets__ReqId__15502E78" FromRole="DonationReq" ToRole="Ticket" />
+  </EntityType>
+  <EntityType Name="WaiverReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityFlyerPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ActivityCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityZipCode" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="IndividualRequested" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfParticipants" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver1TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Approver1Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver2TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Approver2Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <Property Name="RequestStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateClosed" Type="DateTime" Precision="3" />
+    <Property Name="ParticipantSport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParticipantNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Tickets__ReqId__15502E78">
+    <End Type="ATHL_DonationRequestTestModel.DonationReq" Role="DonationReq" Multiplicity="1" />
+    <End Type="ATHL_DonationRequestTestModel.Ticket" Role="Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonationReq">
+        <PropertyRef Name="ReqId" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="ReqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
